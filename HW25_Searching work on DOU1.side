@@ -1,0 +1,233 @@
+{
+  "id": "2fe3a28e-2751-442e-999b-54153d86affa",
+  "version": "2.0",
+  "name": "HW25_Searching work on DOU",
+  "url": "https://dou.ua/",
+  "tests": [{
+    "id": "5022406e-531f-4391-a681-e885eee03607",
+    "name": "Search \"QA\" in the section \"WORK\"",
+    "commands": [{
+      "id": "2ff22b1a-74da-40e7-93cc-39a68ac0be53",
+      "comment": "",
+      "command": "open",
+      "target": "https://dou.ua",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56bd1173-84eb-4110-a0c9-7bf09af2320f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.logo > a",
+      "targets": [
+        ["css=.logo > a", "css:finder"],
+        ["xpath=//a[contains(@href, 'https://dou.ua/')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "432f707c-23aa-4f16-9ac7-a2e402891cdd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.b-head li:nth-child(6) > a",
+      "targets": [
+        ["css=.b-head li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Робота')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://jobs.dou.ua/')])[2]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": "РОБОТА"
+    }, {
+      "id": "ed468d9a-67c4-4471-a2f2-3b09f737a9ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.b-head li:nth-child(6) > a",
+      "targets": [
+        ["css=.b-head li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Робота')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'https://jobs.dou.ua/')])[2]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a929e61e-a11c-4fc2-ac2d-876bb3a29692",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=li > .sel",
+      "targets": [
+        ["css=li > .sel", "css:finder"],
+        ["xpath=//a[contains(text(),'Робота')]", "xpath:link"],
+        ["xpath=//div[@id='container']/div/header/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://jobs.dou.ua/')])[2]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "717f6a7e-5d87-46a3-92ba-3533b5a5dcc7",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//*[@id=\"container\"]/div[1]/header/ul/li[6]/a",
+      "targets": [],
+      "value": "РОБОТА"
+    }, {
+      "id": "605c5a56-a072-4c2a-87bd-bf5125c132ed",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//*[@id=\"container\"]/div[1]/div[1]/div[2]/form/span/input",
+      "targets": [],
+      "value": "QA"
+    }, {
+      "id": "9eb2b3fc-9125-4e4e-ae5b-7a1ec55e3a83",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-search",
+      "targets": [
+        ["css=.btn-search", "css:finder"],
+        ["xpath=//input[@value='Знайти']", "xpath:attributes"],
+        ["xpath=//div[@id='container']/div/div/div[2]/form/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a11b4339-d7fb-461e-aff9-4d7a9f9ac47d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//*[@id=\"vacancyListId\"]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d76fc542-3c05-4f08-852d-54f4a60f5f58",
+    "name": "Search for sites with non-existent data",
+    "commands": [{
+      "id": "f6f43445-f6c6-4e8f-a3cf-8c53b9d1dd51",
+      "comment": "",
+      "command": "open",
+      "target": "https://dou.ua",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "546caf13-3c82-4ff2-8a67-7ebb3e041a69",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//*[@id=\"txtGlobalSearch\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f03fabc3-9c5d-4c78-ba59-b4337777d22d",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//*[@id=\"txtGlobalSearch\"]",
+      "targets": [],
+      "value": "alfreancrlaeva"
+    }, {
+      "id": "49486181-4f2b-4a2b-80fc-7c89dfd19757",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=txtGlobalSearch",
+      "targets": [
+        ["id=txtGlobalSearch", "id"],
+        ["name=q", "name"],
+        ["css=#txtGlobalSearch", "css:finder"],
+        ["xpath=//input[@id='txtGlobalSearch']", "xpath:attributes"],
+        ["xpath=//div[@id='container']/div/header/div/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d08e4231-1a4b-41b9-a578-ad2c79f66056",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.gs-snippet",
+      "targets": [
+        ["css=.gs-snippet", "css:finder"],
+        ["xpath=//div[@id='___gcse_0']/div/div/div/div[5]/div[2]/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30c3a3dd-9b60-4d6f-a72d-626fd80e81bf",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=//*[@id=\"___gcse_0\"]/div/div/div/div[5]/div[2]/div/div/div[1]/div/div/div",
+      "targets": [],
+      "value": "Результатів немає"
+    }]
+  }, {
+    "id": "4e3c4ca6-a914-46b3-bf90-a68051533b89",
+    "name": "Go to the QA community page",
+    "commands": [{
+      "id": "b92a6a7f-a433-4191-90ef-993d50d0b46c",
+      "comment": "",
+      "command": "open",
+      "target": "https://dou.ua",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c4e0c47-c409-4644-a28b-2cb79a4c7c44",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=/html/body/div[1]/header/ul/li[3]/a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5e73cf1-450b-4180-8f58-03a77f89a8d6",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=/html/body/div[1]/header/ul/li[3]/a",
+      "targets": [],
+      "value": "ФОРУМ"
+    }, {
+      "id": "aa5eccb3-e193-45a4-8fdb-8d469e85d7f5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=/html/body/div[1]/header/ul/li[3]/a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2b7fad2-c251-47f5-b8aa-7f993c07317b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.toptags",
+      "targets": [
+        ["css=.toptags", "css:finder"],
+        ["xpath=//div[4]/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d63f778-b6c8-4b21-804c-6298c9632146",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=/html/body/div[1]/div[4]/a[1]",
+      "targets": [],
+      "value": "QA"
+    }, {
+      "id": "3c4798b0-7365-4387-93f0-ee694a481cfe",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=/html/body/div[1]/div[4]/a[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e4587eb-e8c6-41f6-80e2-f3d16352d944",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'QA спільнота')]", "xpath:innerText"]
+      ],
+      "value": "QA спільнота"
+    }]
+  }],
+  "suites": [{
+    "id": "dd20b0b5-d42a-4f40-8dd9-6471dfc9f918",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5022406e-531f-4391-a681-e885eee03607"]
+  }],
+  "urls": ["https://dou.ua/"],
+  "plugins": []
+}
